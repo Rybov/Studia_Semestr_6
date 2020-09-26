@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.PatientInfoController">
+    <Text id="title" layoutX="295.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Karta pacjenta" wrappingWidth="145.7294921875">
+        <font>
+            <Font size="19.0" />
+        </font>
+    </Text>
+    <DatePicker fx:id="startDate" layoutX="51.0" layoutY="218.0" onAction="#fillEventView" />
+    <DatePicker fx:id="lastDate" layoutX="269.0" layoutY="218.0" onAction="#fillEventView" />
+    <TableView fx:id="eventView" layoutX="36.0" layoutY="259.0" onMouseClicked="#showmore" prefHeight="280.0" prefWidth="653.0">
+        <columns>
+            <TableColumn fx:id="dates" prefWidth="169.0" text="Data" />
+            <TableColumn fx:id="events" prefWidth="483.0" text="Badanie" />
+        </columns>
+    </TableView>
+    <TextField fx:id="id" editable="false" layoutX="164.0" layoutY="54.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="firstname" editable="false" layoutX="164.0" layoutY="80.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="lastname" editable="false" layoutX="164.0" layoutY="106.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="gender" editable="false" layoutX="164.0" layoutY="132.0" prefHeight="26.0" prefWidth="171.0" />
+    <Text layoutX="42.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identyfikator" wrappingWidth="121.7294921875" />
+    <Text layoutX="42.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Imię" wrappingWidth="121.72949349880219" />
+    <Text layoutX="42.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwisko" wrappingWidth="121.72949349880219" />
+    <Text layoutX="42.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Płeć" wrappingWidth="121.72949349880219" />
+    <TextField fx:id="birthdate" editable="false" layoutX="164.0" layoutY="158.0" prefHeight="26.0" prefWidth="171.0" />
+    <Text layoutX="42.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data urodzenia" wrappingWidth="121.72949349880219" />
+    <TextField fx:id="phonenumber" editable="false" layoutX="484.0" layoutY="54.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="address" editable="false" layoutX="484.0" layoutY="80.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="city" editable="false" layoutX="484.0" layoutY="106.0" prefHeight="26.0" prefWidth="171.0" />
+    <TextField fx:id="postcode" editable="false" layoutX="484.0" layoutY="132.0" prefHeight="26.0" prefWidth="171.0" />
+    <Text layoutX="362.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numer telefonu" wrappingWidth="121.7294921875" />
+    <Text layoutX="362.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica" wrappingWidth="121.72949349880219" />
+    <Text layoutX="362.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto" wrappingWidth="121.72949349880219" />
+    <Text layoutX="362.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kod pocztowy" wrappingWidth="121.72949349880219" />
+    <TextField fx:id="country" editable="false" layoutX="484.0" layoutY="158.0" prefHeight="26.0" prefWidth="171.0" />
+    <Text layoutX="362.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Państwo" wrappingWidth="121.72949349880219" />
+   <Button layoutX="637.0" layoutY="553.0" mnemonicParsing="false" onAction="#back" text="Powrót" />
+   <Button fx:id="wykresy" layoutX="550.0" layoutY="218.0" mnemonicParsing="false" onMouseClicked="#charts" prefHeight="26.0" prefWidth="136.0" text="Wykresy" />
+</AnchorPane>

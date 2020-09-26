@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="548.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.MenuController">
+   <children>
+      <TableView id="tableall" fx:id="patiendview" layoutX="39.0" layoutY="29.0" prefHeight="445.0" prefWidth="669.0">
+        <columns>
+          <TableColumn id="column1" fx:id="column1" prefWidth="190.0" resizable="false" text="Imię" />
+          <TableColumn id="column2" fx:id="column2" prefWidth="195.0" resizable="false" text="Nazwisko" />
+            <TableColumn id="column3" fx:id="column3" prefWidth="283.0" resizable="false" text="Data Urodzenia" />
+        </columns>
+      </TableView>
+      <TextField id="filter" fx:id="filter" layoutX="39.0" layoutY="488.0" onAction="#fillPatientView" prefHeight="26.0" prefWidth="266.0" promptText="Szukaj według nazwiska" />
+      <Button id="show" fx:id="patientallinfo" layoutX="554.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#goToALLInfo" prefHeight="26.0" prefWidth="154.0" text="Wybierz Pacjenta" />
+      <Label fx:id="label" layoutX="541.0" layoutY="506.0" text="Pacjent nie został wybrany!" />
+   </children>
+</AnchorPane>

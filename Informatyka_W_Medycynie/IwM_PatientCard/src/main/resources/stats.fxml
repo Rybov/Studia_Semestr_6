@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="672.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.StatsController">
+   <children>
+      <LineChart fx:id="chart" alternativeColumnFillVisible="true" layoutX="21.0" layoutY="31.0" legendSide="TOP" prefHeight="455.0" prefWidth="800.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <DatePicker fx:id="min" layoutX="72.0" layoutY="570.0" onAction="#choiceOnClick" />
+      <DatePicker fx:id="max" layoutX="572.0" layoutY="570.0" onAction="#choiceOnClick" />
+      <ChoiceBox fx:id="choice" layoutX="311.0" layoutY="570.0" onAction="#choiceOnClick" prefHeight="26.0" prefWidth="220.0" />
+      <Text layoutX="157.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Od" />
+      <Text layoutX="657.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do" />
+       <Text fx:id="nodata" fill="#c31010" layoutX="357.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brak Danych" />
+   </children>
+</AnchorPane>
