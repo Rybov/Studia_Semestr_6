@@ -1,0 +1,25 @@
+li { list-style-type: square; }
+.wstęp{ font-style: italic;}
+#cena {
+    color: red; 
+    font-weight: bold;
+}
+td img {
+    border-style: solid;
+    border-color: blue;
+}
+td img:hover {
+    border-style: solid;
+    border-color: red;
+}
+h1+h2 {letter-spacing: 5px}
+[colspan = "2"]{font-size: small;}
+p+p{color:grey;}
+
+body {background-image: url(https://ecsmedia.pl/c/instytut-b-iext54833528.jpg); background-repeat: repeat-y; background-size: 100px;}
+
+h1 { color: blue }
+h1 { color: green } 
+* { font-family: Tahoma }
+body { margin: 5em 10em 5em 10em }
+p { text-align: justify }

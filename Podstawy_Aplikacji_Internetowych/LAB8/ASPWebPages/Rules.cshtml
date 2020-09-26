@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @{ var rules = (List<string>)Session["rules"];}
+    <ol>
+        <li>you do not talk about Fight Club.</li>
+        <li>you DO NOT talk about Fight Club!</li>
+        <li>if someone yells “stop!”, goes limp, or taps out, the fight is over. </li>
+        <li>only two guys to a fight. </li>
+        <li>one fight at a time, fellas. </li>
+        <li>the fights are bare knuckle. No shirt, no shoes, no weapons. </li>
+        <li>fights will go on as long as they have to. Eighth and final rule: if this is your first time at Fight Club, you have to fight.”</li>
+        @if (rules != null && rules.Any())
+        {
+            foreach (var rule in rules)
+            {
+                <li>@rule</li>
+            }
+        }
+
+    </ol>
+    <div>
+        <form method="post" action="~/add.cshtml">
+            Add new rule
+            <input type="text" name="rule" /><br />
+            <input type="submit" value="Submit" class="submit" />
+        </form>
+    </div>
+</body>
+</html>

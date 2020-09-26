@@ -1,0 +1,15 @@
+﻿@model IEnumerable<lab9.Models.Genre>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @Html.Partial("_GenresList", Model)
+</p>
+
